@@ -1,0 +1,11 @@
+{
+    "dart.flutterHotReloadOnSave": true,
+    "dart.lineLength": 500,
+    "dart.flutterTrackWidgetCreation": true,
+    "editor.detectIndentation": true,
+    "editor.insertSpaces": true,
+    "editor.codeActionsOnSave": {
+      "source.fixAll": true,
+      "source.organizeImports": true
+    },
+  }
