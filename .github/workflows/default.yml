@@ -1,0 +1,37 @@
+name: Check, test and build application
+
+on: push
+
+jobs:
+  formatting-check:
+    name: Checking format on ${{ matrix.os }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v1
+      - name: Install flutter
+        uses: subosito/flutter-action@v1
+        with:
+          flutter-version: "1.12.x"
+          channel: "stable"
+      - name: Check format
+        run: flutter format -n -l 500 --set-exit-if-changed ./lib/src/*
+
+  android-test-and-build:
+    name: Test and build on ${{ matrix.os }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v1
+      - name: Install java
+        uses: actions/setup-java@v1
+        with:
+          java-version: "11.x"
+      - name: Install flutter
+        uses: subosito/flutter-action@v1
+        with:
+          flutter-version: "1.12.x" # you can use 1.12
+          channel: "stable" # optional, default to: 'stable'
+      - run: flutter pub get
+      - run: flutter test
+      - run: flutter build apk --release -t lib/main.dart
