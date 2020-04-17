@@ -121,7 +121,6 @@ class _AppButtonState extends State<AppButton> {
     }
   }
 
-// (widget.disabled) ? AppColors.buttonDisabledBackground : (widget.primary) ? AppColors.primary : AppColors.buttonBackground
   Color getBackgroundColor() {
     if (widget.disabled) {
       return AppColors.buttonDisabledBackground;
@@ -129,7 +128,7 @@ class _AppButtonState extends State<AppButton> {
       return AppColors.buttonBackgroundPrimaryActive;
     } else if (widget.primary) {
       return AppColors.primary;
-    } else if(!widget.primary && _tapInProgress) {
+    } else if (!widget.primary && _tapInProgress) {
       return AppColors.buttonBackgroundActive;
     } else {
       return AppColors.buttonBackground;
