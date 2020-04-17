@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_twitch_clone/src/pages/auth/login_page.dart';
 import 'package:flutter_twitch_clone/src/theme/app_text_styles.dart';
 import 'package:flutter_twitch_clone/src/widgets/app_button.dart';
 
@@ -14,7 +15,7 @@ class _WelcomePageState extends State<WelcomePage> {
       body: Builder(
         builder: (BuildContext context) => SafeArea(
           child: Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 40.0),
+            padding: EdgeInsets.symmetric(horizontal: 40.0),
             child: Center(
               child: Column(
                 mainAxisSize: MainAxisSize.min,
@@ -28,7 +29,9 @@ class _WelcomePageState extends State<WelcomePage> {
                     primary: true,
                     full: true,
                     text: 'Se connecter',
-                    onPressed: () {},
+                    onPressed: () {
+                      Navigator.of(context).push(MaterialPageRoute(builder: (BuildContext context) => LoginPage()));
+                    },
                   ),
                   SizedBox(height: 15),
                   AppButton.text(

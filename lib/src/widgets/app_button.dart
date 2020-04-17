@@ -107,7 +107,7 @@ class _AppButtonState extends State<AppButton> {
       }
 
       // Default return the child
-      return widget.child;
+      return Center(child: widget.child);
     }
   }
 
