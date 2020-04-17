@@ -22,5 +22,4 @@ abstract class AppColors {
   // Inputs
   static const Color inputIdleBackground = Color.fromARGB(255, 230, 230, 230);
   static const Color inputActiveBackground = Color.fromARGB(255, 255, 255, 255);
-
 }

@@ -22,10 +22,7 @@ class _AppLinkState extends State<AppLink> {
       onTap: widget.onPressed,
       child: Text(
         widget.text,
-        style: TextStyle(
-          color: AppColors.primary,
-          fontSize: 16
-        ),
+        style: TextStyle(color: AppColors.primary, fontSize: 16),
       ),
     );
   }

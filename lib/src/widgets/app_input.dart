@@ -111,17 +111,17 @@ class _AppInputState extends State<AppInput> {
       return Padding(
         padding: EdgeInsetsDirectional.only(end: 4, top: 1),
         child: GestureDetector(
-            behavior: HitTestBehavior.opaque,
-            onTap: () {
-              setState(() {
-                _obscureText = !_obscureText;
-              });
-            },
-            child: Icon(
-                _obscureText ? FeatherIcons.eye : FeatherIcons.eyeOff,
-                size: 17,
-              ),
+          behavior: HitTestBehavior.opaque,
+          onTap: () {
+            setState(() {
+              _obscureText = !_obscureText;
+            });
+          },
+          child: Icon(
+            _obscureText ? FeatherIcons.eye : FeatherIcons.eyeOff,
+            size: 17,
           ),
+        ),
       );
     }
 
