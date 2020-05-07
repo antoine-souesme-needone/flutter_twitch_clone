@@ -1,15 +1,18 @@
 import 'package:flutter/material.dart';
 
 abstract class AppColors {
-  static const Color primary = Color.fromARGB(255, 129, 76, 251);
+  static const Color primary = Color.fromARGB(255, 129, 77, 251);
 
   // Others
   static const Color black = Color.fromARGB(255, 14, 14, 16);
   static const Color grey = Color.fromARGB(255, 229, 229, 229);
   static const Color lightGrey = Color.fromARGB(255, 217, 217, 217);
+  static const Color stickyHeaderGrey = Color.fromARGB(255, 69, 69, 69);
+
 
   // Backgrounds
-  static const Color mainBackground = Color.fromARGB(255, 245, 245, 245);
+  static const Color mainBackground = Color.fromARGB(255, 250, 250, 250);
+  static const Color mainTabNavigatorBackground = Color.fromARGB(255, 237, 239, 240);
 
   // Buttons
   static const Color buttonBackground = Color.fromARGB(255, 229, 229, 229);

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_twitch_clone/src/navigation/main_tab_navigator.dart';
 import 'package:flutter_twitch_clone/src/theme/app_colors.dart';
 import 'package:flutter_twitch_clone/src/widgets/app_appbar.dart';
 import 'package:flutter_twitch_clone/src/widgets/app_button.dart';
@@ -51,7 +52,13 @@ class _LoginPageState extends State<LoginPage> {
                     full: true,
                     primary: true,
                     text: 'Se connecter',
-                    onPressed: () {},
+                    onPressed: () {
+                      // Pop all history
+                      Navigator.of(context).popUntil((route) => route.isFirst);
+
+                      // Push new page
+                      Navigator.of(context, rootNavigator: true).pushReplacement(MaterialPageRoute(builder: (BuildContext context) => MainTabNavigator()));
+                    },
                   ),
                 ],
               ),
